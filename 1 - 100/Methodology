@@ -1,0 +1,39 @@
+Number 01 - Two Sum
+My approach checks every pair of distinct indices using a nested loop. It checks each index
+against every other index to see whether their values sum to the target, and returns the first 
+matching pair.
+----------------------------------
+Number 02 - Add Two Numbers
+The two linked lists store the digits in reverse order, so the first node of each is the units digit, 
+which allows the values to be added using column addition from the start of each list. It creates a dummy 
+node to build the answer, and a pointer (current) to track the end of the list. It loops while either list 
+has nodes left or there is a carry remaining. In each loop, it takes the current digit from each list, or 0 
+if that list has run out of values, and adds them together with the carry. The % 10 is to get the digit from 
+the addition and the // 10 is to get the carry. A new node holding the digit is added to the answer list, 
+and current, l1 and l2 are all moved forward to their next nodes. It returns dummy.next, which skips the dummy 
+node and gives the start of the answer.
+----------------------------------
+Number 09 - Palidrome Number
+Inside the return it compares the string version of 'x' with a back-to-front string
+version of 'x' using the equality operator (==), which returns a boolean value.
+----------------------------------
+Number 13 - Roman to Integer
+After mapping each Roman numeral to its respective integer in a dictionary, it walks through the 
+string one numeral at a time. For each numeral it checks it against the next and if its smaller
+than it,it subtracts it, Otherwise it adds it. The last numeral is always added as theres
+nothing after it to compare it to.
+---------------------------------
+Number 14 - Longest Common Prefix
+After finding the shortest string, as the prefix cannot be longer than it, it goes through each
+character position across every word, e.g. word 1 char 1, word 2 char 1 and so on. As soon as a 
+character doesnt match, it saves the position it got up to and returns the common prefix up to that
+point. If every character matches, the entirety of the shortest string is returned. Alternatively, 
+if nothing matches it returns an empty string.
+----------------------------------
+Number 20 - Valid Parentheses
+After creating an empty list to use as a stack and a dictionary of opening brackets with the matching closing 
+bracket, the code goes through the string and pushes opening brackets onto a stack. When it hits a closing 
+bracket, it pops the most recent opening bracket and checks that its a matching pair. If the stack is 
+empty when a closing bracket is hit, or the pair doesnt match, its invalid. At the end of the loop, the string 
+is only valid if the stack is empty, meaning no open brackets were left unclosed.
+----------------------------------
