@@ -37,3 +37,11 @@ bracket, it pops the most recent opening bracket and checks that its a matching 
 empty when a closing bracket is hit, or the pair doesnt match, its invalid. At the end of the loop, the string 
 is only valid if the stack is empty, meaning no open brackets were left unclosed.
 ----------------------------------
+Number 21 - Merge Two Sorted Lists
+After creating a dummy node to build the merged list from, and a pointer (current) to track the end of it. 
+It loops while both lists still have nodes and compares which has the greater value at the front of each. 
+The node with the smaller value is attached to the merged list, and that list moves forward to its next node, 
+along with the pointer, while the other list stays put. If the values are equal, list 1 has a node taken first.  
+Once one list runs out of nodes, the rest of the other list is attached in one step, as its already sorted and its nodes 
+are still linked. After the process it returns dummy.next .
+----------------------------------
