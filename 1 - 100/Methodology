@@ -45,3 +45,9 @@ along with the pointer, while the other list stays put. If the values are equal,
 Once one list runs out of nodes, the rest of the other list is attached in one step, as its already sorted and its nodes 
 are still linked. After the process it returns dummy.next .
 ----------------------------------
+Number 26 - Remove Duplicates from Sorted Array
+k is set to a value of 1 as the first value is always unique. It then loops from index 1 through to the end of nums, 
+comparing each value with the one before it. As the array is sorted, duplicates are always next to each other, 
+so if the two values arent equal, the current value is unique. This is where k is used. k marks the position next to the 
+last unique value, so the unique value is written there and k increases by one. This repeats through all values in nums, 
+and k is returned as the number of unique values.
