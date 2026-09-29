@@ -51,3 +51,8 @@ comparing each value with the one before it. As the array is sorted, duplicates 
 so if the two values arent equal, the current value is unique. This is where k is used. k marks the position next to the 
 last unique value, so the unique value is written there and k increases by one. This repeats through all values in nums, 
 and k is returned as the number of unique values.
+----------------------------------
+Number 27 - Remove Element
+k is set to 0 to be used as both; a count of the amount of numbers != to val and as the position location for them to be moved to.
+The code then loops through nums and checks what numbers are not equal to val and moves a correct value forward, then adds 1 to k. 
+It then returns k as the amount of numbers != val.
