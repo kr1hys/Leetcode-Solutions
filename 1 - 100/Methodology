@@ -56,3 +56,16 @@ Number 27 - Remove Element
 k is set to 0 to be used as both; a count of the amount of numbers != to val and as the position location for them to be moved to.
 The code then loops through nums and checks what numbers are not equal to val and moves a correct value forward, then adds 1 to k. 
 It then returns k as the amount of numbers != val.
+----------------------------------
+Number 28 - Find the First Occurrence in a String
+The outer loop tries each possible starting position for needle in the haystack. For each start , the count is set to 0 and
+the inner loop compares haystacks characters against those in the needles offset by the starting position, adding 1
+to count on a match and then breaking out of the loop on the first mismatch. If the count reaches the length of needle,
+then i is returned as the index. Otherwise -1 is returned.
+----------------------------------
+Number 35 - Search Insert position
+Left and right are initally set to the first and last index of nums, marking where the target could be.  While left is less 
+or equal to right , mid is set to the middle point between left and right. nums indexed at value mid is compared against the target,
+if nums mid is smaller than the target , left moves to mid + 1 and if its bigger right is moved to mid -1, moving the range each time.
+If the target is not found, the loop ends as the variable left passes the right variable and returns the position where the target would
+be.
