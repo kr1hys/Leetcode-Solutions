@@ -69,3 +69,16 @@ or equal to right , mid is set to the middle point between left and right. nums 
 if nums mid is smaller than the target , left moves to mid + 1 and if its bigger right is moved to mid -1, moving the range each time.
 If the target is not found, the loop ends as the variable left passes the right variable and returns the position where the target would
 be.
+----------------------------------
+Number 58 - Length of Last word
+I solved this two ways, one using .split()[-1] of s to find the length of the last word as .split, splits strings into a list of strings 
+by breaking on every section of whitespace, and removes all whitespace from either end.
+Alternatively I looped backwards through the string, first skipping all the trailing spaces using a while loop. Then using a second while 
+loop with the conditions i >= 0 and s[i] is not a space, adding one to the length each time. When either condition breaks the loop, 
+the length is returned.
+----------------------------------
+Number 66 - Plus one
+Initially it finds the index of the final digit by subtracting one from len(digits). Then the while loop moves backwards through the list 
+with conditions final >= 0 and digits[final] ==9, setting each 9 to a 0 and decreasing final by one. Once the loop ends if final is less than 0, 
+every digit had to have been a 9 so a 1 is inserted at the front of the list. Otherwise, final is the position of the first digit from the 
+right of the list that is not a 9, so one is added to that position and then the list is returned.
